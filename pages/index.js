@@ -1,5 +1,11 @@
-function Home(){
-  return <h1>Teste 13</h1>
-}
+import { useState } from "react";
 
-export default Home
+function Home(){
+    return (
+        <div>
+            <h3>HOME</h3>
+        </div>
+    )
+
+}
+export default Home;
