@@ -11,5 +11,8 @@
   "dependencies": {
     "next": "^13.1.6",
     "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@checkly/cli": "^0.4.7"
   }
 }
