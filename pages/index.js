@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true); // Set dark mode as default
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -15,7 +16,7 @@ function Home() {
   return (
     <div className={`d-flex justify-content-center align-items-center vh-100 ${darkMode ? 'bg-dark' : 'bg-light'}`}>
       <main className="container">
-        <div className="card mx-auto" style={{ maxWidth: '800px', padding: '2rem', ...themeStyles }}>
+        <div className="card mx-auto shadow-lg rounded text-center" style={{ maxWidth: '800px', padding: '2rem', ...themeStyles }}>
           <h1 className="h2 mb-4" style={{ fontSize: '2rem', marginBottom: '1rem' }}>
             Hi{' '}
             <img
@@ -41,6 +42,7 @@ function Home() {
           <button className={`btn mt-3 ${darkMode ? 'btn-light' : 'btn-dark'}`} onClick={toggleDarkMode}>
             Toggle {darkMode ? 'Light' : 'Dark'} Mode
           </button>
+          <footer className="mt-4">Created and designed with ❤️ by Renato Pires</footer>
         </div>
       </main>
     </div>
