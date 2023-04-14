@@ -51,7 +51,8 @@ function Home() {
           <button className={`btn mt-3 ${darkMode ? 'btn-light' : 'btn-dark'}`} onClick={toggleDarkMode}>
             Toggle {darkMode ? 'Light' : 'Dark'} Mode
           </button>
-          <footer className="mt-4">Created and designed with ❤️ by Renato Pires</footer>
+          <footer className="mt-4">  Created and designed with ❤️<br />by Renato Pires</footer>
+
         </div>
       </main>
     </div>
