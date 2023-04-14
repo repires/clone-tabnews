@@ -16,7 +16,7 @@ function Home() {
   return (
     <div className={`d-flex justify-content-center align-items-center vh-100 ${darkMode ? 'bg-dark' : 'bg-light'}`}>
       <main className="container">
-        <div className="card mx-auto shadow-lg rounded text-center" style={{ maxWidth: '800px', padding: '2rem', ...themeStyles }}>
+        <div className="card mx-auto shadow-lg rounded text-center p-4" style={{ maxWidth: '800px', ...themeStyles }}>
           <h1 className="h2 mb-4" style={{ fontSize: '2rem', marginBottom: '1rem' }}>
             Hi{' '}
             <img
