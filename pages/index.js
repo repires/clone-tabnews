@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Home() {
@@ -12,6 +12,23 @@ function Home() {
     backgroundColor: darkMode ? '#333' : '#fff',
     color: darkMode ? '#ddd' : '#333',
   };
+
+  // Effect to run once when the component mounts
+  useEffect(() => {
+    const script1 = document.createElement('script');
+    script1.async = true;
+    script1.src = 'https://www.googletagmanager.com/gtag/js?id=G-V3VBYLPPGK';
+    document.head.appendChild(script1);
+
+    const script2 = document.createElement('script');
+    script2.textContent = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-V3VBYLPPGK');
+    `;
+    document.head.appendChild(script2);
+  }, []);
 
   return (
     <div className={`d-flex justify-content-center align-items-center ${darkMode ? 'bg-dark' : 'bg-light'}`} style={{ minHeight: '100vh', paddingBottom: '2rem', marginBottom: '-2rem' }}>
@@ -36,32 +53,7 @@ function Home() {
             />
             My name is Renato (Ray) Pires and I'm back in the game! 😃
           </h1>
-          <p>
-            As a computer engineer with many years of experience but no knowledge of new technologies with web development, I have recently sold my company and am now considering a career change. My wife has been an incredible source of motivation and support during this transition.
-          </p>
-          <p>
-            Despite my hesitations and uncertainty about entering a new field, my wife has been encouraging me to explore the world of web development. She recognizes my passion for problem-solving and my eagerness to learn new things, and she believes that web development could be the perfect fit for me.
-          </p>
-          <p>
-            My wife has been providing me with resources, such as online courses and tutorials, to help me gain the necessary skills to succeed in this field. She has also been connecting me with her network of professionals in the industry to offer guidance and advice.
-          </p>
-          <p>
-            Most importantly, my wife's unwavering belief in me has given me the confidence to take the leap and pursue this new career path. Her encouragement and support have been invaluable, and I am grateful to have her by my side as I navigate this exciting new chapter in my life.
-          </p>
-          <button className={`btn mt-3 ${darkMode ? 'btn-light' : 'btn-dark'}`} onClick={toggleDarkMode}>
-            Toggle {darkMode ? 'Light' : 'Dark'} Mode
-          </button>
-          <footer className="mt-4">  Created and designed with ❤️<br />by Renato Pires</footer>
-
         </div>
-              <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3VBYLPPGK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-V3VBYLPPGK');
-</script>
       </main>
     </div>
   );
