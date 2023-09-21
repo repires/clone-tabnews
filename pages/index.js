@@ -12,6 +12,7 @@ function Home() {
     backgroundColor: darkMode ? '#333' : '#fff',
     color: darkMode ? '#ddd' : '#333',
   };
+  
 
   return (
     <div className={`d-flex justify-content-center align-items-center ${darkMode ? 'bg-dark' : 'bg-light'}`} style={{ minHeight: '100vh', paddingBottom: '2rem', marginBottom: '-2rem' }}>
