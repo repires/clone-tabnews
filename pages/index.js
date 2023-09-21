@@ -14,15 +14,6 @@ function Home() {
   };
 
   return (
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V3VBYLPPGK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-V3VBYLPPGK');
-</script>
     <div className={`d-flex justify-content-center align-items-center ${darkMode ? 'bg-dark' : 'bg-light'}`} style={{ minHeight: '100vh', paddingBottom: '2rem', marginBottom: '-2rem' }}>
       <style>
         {`
@@ -63,6 +54,14 @@ function Home() {
           <footer className="mt-4">  Created and designed with ❤️<br />by Renato Pires</footer>
 
         </div>
+              <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3VBYLPPGK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V3VBYLPPGK');
+</script>
       </main>
     </div>
   );
